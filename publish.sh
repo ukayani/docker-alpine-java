@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$BRANCH" == "master" ]] && [[ "$TRAVIS_TAG" != "" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false"]]; then
+if [ "$TRAVIS_TAG" != "" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo "Building docker image $DOCKER_REPO:$TRAVIS_TAG"
     docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
     TAG="latest"
