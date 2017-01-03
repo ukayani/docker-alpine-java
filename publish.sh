@@ -8,6 +8,5 @@ if [[ "$BRANCH" == "master" ]] && [[ "$TRAVIS_TAG" != "" ]] && [[ "$TRAVIS_PULL_
     docker tag $DOCKER_REPO:$COMMIT $DOCKER_REPO:$TAG
     docker tag $DOCKER_REPO:$COMMIT $DOCKER_REPO:$TRAVIS_TAG
     docker push $DOCKER_REPO
-    
 fi
 
